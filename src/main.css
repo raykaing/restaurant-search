@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.4;
+  background-color: rgba(255, 255, 255, 0.692);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  background: url('./images/food02.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0 50px 0;
+}
+
+.container h1 {
+  font-size:2rem;
+  color: rgb(99, 99, 99); 
+  font-family: inherit; 
+  text-align: center;
+  text-shadow: 0px 0 rgb(0, 0, 0);
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  
+  width: 300px;
+  margin: auto;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.searchBar .restaurant {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  width: 350px;
+  border: 0;
+  border-bottom: 2px solid #5a5a5a;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #5a5a5a;
+  padding: 0px 20px 5px 0px;
+  background: transparent;
+  transition: border-color 0.2s;
+  display: block;
+  margin-top: 30px;
+}
+
+.searchBar .city {
+  font-family: inherit;
+  width: 350px;
+  border: 0;
+  border-bottom: 2px solid #5a5a5a;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #5a5a5a;
+  padding: 10px 0px 5px 0px;
+  margin-top: 30px;
+  background: transparent;
+  transition: border-color 0.2s;
+  display: block;
+}
+
+.searchBar .search-btn {
+  font-family: inherit;
+  margin: 40px 20px 0px 75px;
+  font-size: 18px;
+  height: 40px;
+  width: 200px;
+  font-weight: 600;
+  border-radius: 12px;
+  background-color: rgb(201, 236, 201);
+  border: 1px solid;
+  color: #5a5a5a;
+  cursor: pointer;
+  display: block;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.searchBar .search-btn:hover {
+  background-color: grey;
+}
+
+@media (max-width: 950px) {
+  .searchBar {
+    width: 90%;
+  }
+  .searchBar .city {
+    width: 150px;
+    margin: 15px 5px 15px 10px;
+  }
+  .searchBar .restaurant {
+    width: 250px;
+    margin: 15px 5px 15px 10px;
+  }
+  .searchBar .search-btn {
+    width: 90px;
+    margin: 15px 5px 15px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .jumbotron h1{
+    font-size: 30px;
+  }
+
+  .searchBar {
+    display: block;
+  }
+  .searchBar .city, .searchBar .restaurant, .searchBar .search-btn {
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .searchBar div {
+    width: 90%;
+    margin: auto;
+    align-content: center;
+    padding: 10px;
+  }
+}
+
+
+.restaurant-tile {
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px 20px 20px 30px;
+  clear: both;
+  height: 240px;
+  background-color: white;
+  box-sizing: border-box;
+  width: 1100px;
+
+}
+
+.restaurant-tile .restaurant-img {
+  margin-right: 20px;
+  float: left;
+  height: 300px;
+  width: 300px;
+}
+
+
+.restaurant-tile .restaurant-rating {
+  float: right;
+  text-align: center;
+}
+
+.restaurant-tile .restaurant-name {
+  margin-top: 5px;
+  font-size: 30px;
+  color:#5a5a5a;
+}
+
+.restaurant-tile .restaurant-cusines {
+  font-size: 16px;
+  color:rgb(157, 233, 157);
+  line-height: 25px;
+}
+
+.restaurant-tile .restaurant-address {
+  color: rgba(54, 53, 53, 0.658);
+}
+
+.restaurant-tile .restaurant-cost {
+  color: rgba(54, 53, 53, 0.658);
+}
+
+.restaurant-tile .restaurant-rating p {
+  background-color: rgb(157, 233, 157);
+  height: 30px;
+  width: 40px;
+  border-radius: 10px;
+  color: white;
+  padding-top: 4px;
+  font-size: 16px;
+  margin: auto;
+}
+
+@media (max-width: 1100px) {
+  .restaurant-tile {
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .restaurant-tile .restaurant-img {
+    height: 140px;
+    width: 140px;
+  }
+
+  .restaurant-tile .restaurant-address {
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .restaurant-tile hr {
+    display: none;
+  }  
+  .restaurant-tile .restaurant-img {
+    float: none;
+  }
+  .restaurant-tile {
+    height: auto;
+  }
+  .restaurant-tile .restaurant-rating div {
+    font-size: 14px;
+  }
+}
